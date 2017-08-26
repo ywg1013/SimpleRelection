@@ -7,10 +7,12 @@ ReflectObjectFactory::ReflectObjectFactory(){
 void* ReflectObjectFactory::CreateObjectByName(std::string className){
   std::map<std::string, PTRCreateObject>::const_iterator iter;
   iter = m_classMap.find(className) ;
-  if ( iter == m_classMap.end() )
-    return NULL ;
-  else
-    return iter->second() ;
+  if ( iter == m_classMap.end() ){
+      return NULL ;
+    }
+  else{
+      return iter->second() ;
+    }
 }
 
 void ReflectObjectFactory::RegistClass(std::string name, PTRCreateObject method){
