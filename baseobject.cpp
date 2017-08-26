@@ -3,8 +3,7 @@
 
 BaseObject::BaseObject():
     m_age(33)
-  , m_name("yang")
-{
+  , m_name("yang"){
 
 }
 

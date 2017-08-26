@@ -9,7 +9,7 @@ class ReflectObject : public BaseObject
 {
 public:
     ReflectObject();
-    void fly();
+    virtual void fly();
 };
 
 #endif // REFLECTOBJECT_H

@@ -3,8 +3,7 @@
 
 REGISTER_CLASS(ReflectObject)
 
-ReflectObject::ReflectObject()
-{
+ReflectObject::ReflectObject(){
 
 }
 
