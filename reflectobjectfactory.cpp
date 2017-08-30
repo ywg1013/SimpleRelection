@@ -4,6 +4,11 @@ ReflectObjectFactory::ReflectObjectFactory(){
 
 }
 
+ReflectObjectFactory::~ReflectObjectFactory()
+{
+  m_classMap.clear();
+}
+
 void* ReflectObjectFactory::CreateObjectByName(std::string className){
   std::map<std::string, PTRCreateObject>::const_iterator iter;
   iter = m_classMap.find(className) ;

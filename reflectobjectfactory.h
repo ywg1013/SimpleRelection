@@ -13,6 +13,7 @@ class ReflectObjectFactory
 
 private:
     ReflectObjectFactory();
+    ~ReflectObjectFactory();
 
 public:
     void* CreateObjectByName(std::string className);
