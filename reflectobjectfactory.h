@@ -16,9 +16,9 @@ private:
     ~ReflectObjectFactory();
 
 public:
-    void* CreateObjectByName(std::string className);
-    void RegistClass(std::string name, PTRCreateObject method) ;
-    static ReflectObjectFactory& Instance() ;
+    void* createObjectByName(std::string className);
+    void registClass(std::string name, PTRCreateObject method) ;
+    static ReflectObjectFactory* getInstance() ;
 
 private:
     std::map<std::string, PTRCreateObject> m_classMap ;
@@ -30,7 +30,7 @@ private:
 class RegisterAction{
 public:
     RegisterAction(std::string className,PTRCreateObject ptrCreateFn){
-        ReflectObjectFactory::Instance().RegistClass(className,ptrCreateFn);
+        ReflectObjectFactory::getInstance()->registClass(className,ptrCreateFn);
     }
 };
 

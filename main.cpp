@@ -7,8 +7,8 @@ int main(int argc, char *argv[])
 {
     QCoreApplication a(argc, argv);
 
-
-    BaseObject* object = (BaseObject*)(ReflectObjectFactory::Instance().CreateObjectByName("ReflectObject"));
+    ReflectObjectFactory*  factory = ReflectObjectFactory::getInstance();
+    BaseObject* object = (BaseObject*)(factory->createObjectByName("ReflectObject"));
 
     if(object)
     {
